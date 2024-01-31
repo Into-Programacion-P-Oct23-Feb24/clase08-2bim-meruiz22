@@ -17,7 +17,7 @@ public class ArrayList02 {
 
     public static void main(String[] args) {
      
-        ArrayList<String> arreglo2 = obtenerDatos();
+        ArrayList<String> arreglo2 = obtenerDatos(); 
         String cadenaFinal = obtenerCadenaFinal(arreglo2);
         System.out.printf("%s\n", cadenaFinal);
     }
@@ -31,6 +31,7 @@ public class ArrayList02 {
         while (bandera) {
             System.out.println("Ingrese un nombre de un país");
             pais = entrada.nextLine();
+            pais=convertirMayusculas(pais);
             arreglo2.add(pais);
             System.out.println("Desea ingresar salir, ingrese (s)");
             opcion = entrada.nextLine();
@@ -51,6 +52,12 @@ public class ArrayList02 {
         }
         return cadenaFinal;
     }    
+    
+    public static String convertirMayusculas(String c){
+        String ma=c.toUpperCase();
+        
+        return ma;
+    }
         /*
         ArrayList <String> arreglo2 = new ArrayList<>();
         
